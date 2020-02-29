@@ -4,13 +4,21 @@
     <mt-header fixed title="VueProject"></mt-header>
 
     <!-- router-view区域 -->
-
+    <router-view></router-view>
     <!-- 底部tabbar区域 -->
     <mt-tabbar v-model="selected">
-      <mt-tab-item id="外卖">外卖</mt-tab-item>
-      <mt-tab-item id="订单">订单</mt-tab-item>
-      <mt-tab-item id="发现">发现</mt-tab-item>
-      <mt-tab-item id="我的">我的</mt-tab-item>
+      <mt-tab-item id="home">
+        <span class="iconfont icon-shouye"></span>首页
+      </mt-tab-item>
+      <mt-tab-item id="member">
+        <span class="iconfont icon-wodeguanzhu"></span>会员
+      </mt-tab-item>
+      <mt-tab-item id="shopcar">
+        <span class="iconfont icon-icon-test"></span>购物车
+      </mt-tab-item>
+      <mt-tab-item id="search">
+        <span class="iconfont icon-sousuo"></span>搜索
+      </mt-tab-item>
     </mt-tabbar>
   </div>
 </template>
@@ -19,15 +27,26 @@
 export default {
   name: "",
   data() {
-    return {};
+    return {
+      selected: "home"
+    };
   },
   components: {},
-  methods: {}
+  methods: {},
+  watch: {
+    selected(newVal, oldVal) {
+      console.log(this.$router);
+      this.$router.push("/" + newVal);
+    }
+  }
 };
 </script>
 
 <style lang="scss" scoped>
 .app-container {
   padding-top: 40px;
+  .iconfont {
+    display: block;
+  }
 }
 </style>
