@@ -1,0 +1,25 @@
+{
+    "status": 0,
+    "results": [{
+            "id": 1,
+            "title": "澳门又有1名新冠肺炎患者出院 连续21天无新增",
+            "click": "1",
+            "add_time": "2020-02-25 21:19:00",
+            "content": "./data/newsInfo/htmlfile/h1.html"
+        },
+        {
+            "id": 2,
+            "title": "一个傻逼",
+            "click": "1",
+            "add_time": "2020-02-25 21:19:00",
+            "content": ""
+        },
+        {
+            "id": 3,
+            "title": "一个hssssssssssssssssssssssssssssssssss",
+            "click": "3",
+            "add_time": "2020-02-25 21:19:00",
+            "content": ""
+        }
+    ]
+}

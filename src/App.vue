@@ -6,7 +6,7 @@
     <!-- router-view区域 -->
     <router-view></router-view>
     <!-- 底部tabbar区域 -->
-    <mt-tabbar v-model="selected">
+    <mt-tabbar v-model="selected" fixed>
       <mt-tab-item id="home">
         <span class="iconfont icon-shouye"></span>首页
       </mt-tab-item>
@@ -28,7 +28,7 @@ export default {
   name: "",
   data() {
     return {
-      selected: "home"
+      selected: ""
     };
   },
   components: {},
@@ -38,6 +38,9 @@ export default {
       console.log(this.$router);
       this.$router.push("/" + newVal);
     }
+  },
+  created() {
+    this.selected = "home";
   }
 };
 </script>
